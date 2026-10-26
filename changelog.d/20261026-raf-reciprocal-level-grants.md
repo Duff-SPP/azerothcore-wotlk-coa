@@ -12,3 +12,8 @@ The donor still needs available credit and a higher level. Group, faction, proxi
 consent, expiry and acceptance-time validation remain enforced. Same-account characters, sibling
 recruits and unrelated recruiters cannot exchange levels. Native summon/teleport and XP rules remain
 unchanged. No SQL migration is required.
+
+Characters actively leveling through Prestige cannot receive RaF-granted levels. The shared
+proposal/acceptance validator checks persisted in-memory Prestige state in both directions;
+a blocked acceptance does not spend the donor's credit. Completed Prestige history alone
+is not a restriction, and eligible non-Prestige recipients retain reciprocal grants.
